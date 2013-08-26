@@ -1,5 +1,17 @@
 <?php
-
+/**
+ * Pings rpc.weblogs.com to inform the site that your blog has been updated.
+ *
+ * @author Philip Brown <philip@supplyhog.com>
+ * @license MIT
+ * @version 1.0
+ * Example
+ * $p = new WebLogsPinger();
+ * if(!$p->ping('My Blog', 'http://www.myblog.com', 'rss.myblog.com'))
+ * 		echo $p->error;
+ * else
+ * 		echo $p->response;
+ */
 class WebLogsPinger {
 	protected $_host = 'http://rpc.weblogs.com/pingSiteForm?';
 	protected $_err = null;
